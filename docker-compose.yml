@@ -17,7 +17,6 @@ services:
       - nginx-certs:/etc/nginx/certs
       - nginx-html:/usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./logs/nginx:/var/log/nginx:z
 
 networks:
   nginx-proxy:
