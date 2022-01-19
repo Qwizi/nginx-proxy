@@ -9,6 +9,7 @@ services:
       - "443:443"
     environment:
       - ENABLE_IPV6=true
+      - DEFAULT_HOST="jebzpapy.tk"
     volumes:
       - nginx-certs:/etc/nginx/certs
       - nginx-html:/usr/share/nginx/html
