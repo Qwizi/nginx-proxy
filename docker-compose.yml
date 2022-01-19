@@ -16,7 +16,7 @@ services:
       - vhost:/etc/nginx/vhost.d
 
 networks:
-  nginx-proxy:
+  default:
     external:
       name: nginx-proxy
 
