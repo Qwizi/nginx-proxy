@@ -15,6 +15,7 @@ services:
       - nginx-certs:/etc/nginx/certs
       - nginx-html:/usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - vhost:/etc/nginx/vhost.d
 
 networks:
   nginx-proxy:
@@ -25,3 +26,4 @@ networks:
 volumes:
   nginx-certs:
   nginx-html:
+  vhost:
