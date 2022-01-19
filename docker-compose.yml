@@ -2,7 +2,7 @@ version: "3"
 
 services:
   nginx-proxy:
-    image: lroguet/rpi-nginx-proxy
+    image: nginxproxy/nginx-proxy
     restart: always
     networks:
       - nginx-proxy
