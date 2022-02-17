@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 jobs:
 
   build:
@@ -20,6 +21,3 @@ jobs:
           workspace: nginx
           docker_compose_filename: docker-compose.yml
           docker_compose_prefix: nginx
-
-on:
-  workflow_dispatch:
