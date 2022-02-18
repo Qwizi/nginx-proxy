@@ -4,6 +4,8 @@ services:
   nginx-proxy:
     image: jwilder/nginx-proxy
     container_name: nginx-proxy
+    restart: always
+    tty: true
     ports:
       - "80:80"
       - "443:443"
@@ -14,6 +16,8 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
   ssl-generator:
     image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: always
+    tty: true
     volumes_from:
       - nginx-proxy
     volumes:
